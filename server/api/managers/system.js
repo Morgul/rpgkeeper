@@ -9,6 +9,7 @@ const Risus = require('../../systems/risus/system');
 const Fate = require('../../systems/fate/system');
 const Wfrp = require('../../systems/wfrp/system');
 const { Genesys, EdgeOfTheEmpire } = require('../../systems/eote/system');
+const GenericRPGExperiment = require('../../systems/generic-experiment/system');
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -21,7 +22,8 @@ class SystemManager
             Fate,
             Genesys,
             EdgeOfTheEmpire,
-            Wfrp
+            Wfrp,
+            GenericRPGExperiment
         ];
 
         _.each(this.systems, (system) => system.init(this));
