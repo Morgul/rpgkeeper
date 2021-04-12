@@ -3,7 +3,7 @@
 //----------------------------------------------------------------------------------------------------------------------
 
 // Config
-import configMan from './server/managers/config';
+import configMan from './src/server/managers/config';
 
 // Logging
 import logging from 'trivial-logging';
@@ -26,30 +26,30 @@ import http from 'http';
 import { Server as SIOServer } from 'socket.io';
 
 // Managers
-import * as dbMan from './server/managers/database';
-import * as accountMan from './server/managers/account';
-import * as permsMan from './server/managers/permissions';
+import * as dbMan from './src/server/managers/database';
+import * as accountMan from './src/server/managers/account';
+import * as permsMan from './src/server/managers/permissions';
 
 // Session Store
 import connectSessionKnex from 'connect-session-knex';
 const KnexSessionStore = connectSessionKnex(session);
 
 // Auth
-import GoogleAuth from './server/auth/google';
+import GoogleAuth from './src/server/auth/google';
 
 // Routes
-import { requestLogger, wrapAsync, serveIndex, errorLogger } from './server/routes/utils';
-import noteRouter from './server/routes/notebook';
-import charRouter from './server/routes/characters';
-import sysRouter from './server/routes/systems';
-import accountsRouter from './server/routes/accounts';
+import { requestLogger, wrapAsync, serveIndex, errorLogger } from './src/server/routes/utils';
+import noteRouter from './src/server/routes/notebook';
+import charRouter from './src/server/routes/characters';
+import sysRouter from './src/server/routes/systems';
+import accountsRouter from './src/server/routes/accounts';
 
 // Version information
 import { version } from './package.json';
 import { AddressInfo } from 'net';
 
 // Utils
-import { setSIOInstance } from './server/utils/sio';
+import { setSIOInstance } from './src/server/utils/sio';
 
 //----------------------------------------------------------------------------------------------------------------------
 // Error Handler
@@ -153,7 +153,7 @@ async function main() : Promise<{ app : Express, sio : any, server : any }>
     //------------------------------------------------------------------------------------------------------------------
 
     // Setup static serving
-    app.use(express.static(path.resolve(__dirname, '..', 'dist', 'client')));
+    app.use(express.static(path.resolve(__dirname, '..', 'dist', 'src', 'client')));
 
     // Set up our application routes
     app.use('/characters', charRouter);

@@ -49,7 +49,7 @@ module.exports = {
         'no-useless-return': 'warn',
         'require-await': 'off',
         'no-mixed-operators': 'warn',
-        'no-shadow': 'warn',
+        'no-shadow': 'off',
 
         // Style
         '@typescript-eslint/type-annotation-spacing': [ 'warn', { before: true, after: true } ],

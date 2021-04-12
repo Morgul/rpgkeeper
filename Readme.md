@@ -1,5 +1,5 @@
 <h1>
-    <img width="32" height="32" src="client/static/images/logo.png">
+    <img width="32" height="32" src="src/client/static/images/logo.png">
     RPGKeeper
 </h1>
 
@@ -19,7 +19,7 @@ Don't get us wrong, Roll20 certainly has a lot of features, and a dedicated fanb
 
 ### How many Characters can I have?
 
-Currently there are no limits on number of characters.
+Currently, there are no limits on number of characters.
 
 ### I have a game I want to add a system for!
 

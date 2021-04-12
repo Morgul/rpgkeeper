@@ -27,15 +27,15 @@
         "preserveSymlinks": true
     },
     "files": [
-        "server/express-shim.d.ts",
+        "src/server/express-shim.d.ts",
         "package.json",
         "server.ts",
         "knexfile.ts",
-        "config.ts",
+        "config.ts"
     ],
     "include": [
-        "server/knex/migrations",
-        "server/knex/seeds"
+        "src/server/knex/migrations",
+        "src/server/knex/seeds"
     ],
     "exclude": [
         "node_modules",

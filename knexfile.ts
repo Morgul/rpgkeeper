@@ -7,7 +7,7 @@ require('ts-node/register');
 import knex from 'knex';
 
 // Config
-import configMan from './server/managers/config';
+import configMan from './src/server/managers/config';
 
 // Logging
 import logging from 'trivial-logging';
@@ -15,7 +15,7 @@ logging.setRootLogger('rpgkeeper');
 logging.init(configMan.config);
 
 // Managers
-import { getConfig } from './server/managers/database';
+import { getConfig } from './src/server/managers/database';
 
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -44,11 +44,11 @@ module.exports = async () =>
     return {
         ...getConfig(),
         migrations: {
-            directory: './server/knex/migrations',
+            directory: './src/server/knex/migrations',
             extension: 'ts'
         },
         seeds: {
-            directory: './server/knex/seeds'
+            directory: './src/server/knex/seeds'
         }
     };
 };
