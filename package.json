@@ -62,7 +62,7 @@
     "autoprefixer": "^9.7.6",
     "bootstrap": "^4.2.1",
     "bootstrap-vue": "^2.13.1",
-    "browserslist": "^4.16.3",
+    "browserslist": "^4.16.5",
     "caniuse-lite": "1.0.30001187",
     "cpr": "^3.0.1",
     "date-fns": "^2.13.0",
